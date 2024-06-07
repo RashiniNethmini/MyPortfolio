@@ -45,6 +45,7 @@ export const Skills = () => {
                                 <h6 style={{fontSize:'15px'}}>Java</h6>
                                 <h6 style={{fontSize:'15px'}}>C</h6> 
                                 <h6 style={{fontSize:'15px'}}>Python</h6>
+                                <h6 style={{fontSize:'15px'}}>C#</h6>
                             </div>
                             <div className="item">
                                 {/* <img src={meter2} alt="Image" /> */}
@@ -54,6 +55,7 @@ export const Skills = () => {
                                 <h6 style={{fontSize:'15px'}}>CSS</h6> 
                                 <h6 style={{fontSize:'15px'}}>Javascript</h6>
                                 <h6 style={{fontSize:'15px'}}>ReactJS</h6>
+                                <h6 style={{fontSize:'15px'}}>VueJS</h6>
                                 
                                 
                             </div>
@@ -70,7 +72,7 @@ export const Skills = () => {
                                 <h5>Backend <br/>Technologies</h5>
                                 <hr></hr>
                                 <h6 style={{fontSize:'15px'}}>Node JS</h6>
-                                <h6 style={{fontSize:'15px'}}><br/></h6> 
+                                <h6 style={{fontSize:'15px'}}>.NET</h6> 
                                 <h6 style={{fontSize:'15px'}}><br/> </h6>
                             </div>
                             <div className="item">
@@ -79,7 +81,7 @@ export const Skills = () => {
                                 <hr></hr>
                                 <h6 style={{fontSize:'15px'}}>MYSQL</h6>
                                 <h6 style={{fontSize:'15px'}}>MONGODB</h6> 
-                                <h6 style={{fontSize:'15px'}}><br/></h6> 
+                                <h6 style={{fontSize:'15px'}}>MSSQL</h6> 
                                 <h6 style={{fontSize:'15px'}}><br/> </h6>
                             </div>
                             {/* <div className="item">
