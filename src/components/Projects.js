@@ -3,6 +3,8 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import projImg1 from "../assets/img/hardwareP.PNG";
 import projImg2 from "../assets/img/SSPPP.PNG";
 import projImg3 from "../assets/img/pro3.PNG";
+import projImg5 from "../assets/img/ITQA.png";
+import projImg6 from "../assets/img/carRental.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 // import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -69,7 +71,7 @@ export const Projects = () => {
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
-                      <Row>
+                      <Row className="justify-content-center">
                         {/* {
                           projects.map((project, index) => {
                             return (
@@ -105,6 +107,46 @@ export const Projects = () => {
                             </div>
                             </a>
                         </Col>
+                      </Row>
+                      <Row>
+                        {/* {
+                          projects.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        } */}
+                        
+                        <Col size={12} sm={6} md={4}>
+                        <a href="https://github.com/RashiniNethmini/ITQA-API-UI-Testing" target="_blank">
+                            <div className="proj-imgbx">
+                            
+                            <img src={projImg5} style={{ height: '230px' }} />
+                              <div className="proj-txtx">
+                                <h4>API-UI-Testing</h4>
+                                <span>Test cases for UI testing of a website and API testing of an API</span>
+                              </div>
+                              
+                            </div>
+                            </a>
+                        </Col>
+                        <Col size={12} sm={6} md={4}>
+                        <a href="https://github.com/Anuja-2000/car-rental-app" target="_blank">
+                            <div className="proj-imgbx">
+                           
+                            <img src={projImg6} style={{ height: '230px' }}/>
+                              <div className="proj-txtx">
+                                <h4>Car Rental Website</h4>
+                                <span>Convenient car rental site</span>
+                                <h6>(ongoing)</h6>
+                              </div>
+                            
+                            </div>
+                            </a>
+                        </Col>
                         <Col size={12} sm={6} md={4}>
                         <a href="https://github.com/shakila2030/Game-Zone" target="_blank">
                             <div className="proj-imgbx">
@@ -113,18 +155,13 @@ export const Projects = () => {
                               <div className="proj-txtx">
                                 <h4>Game Zone</h4>
                                 <span>Multiple games in one place</span>
+                                <h6>(ongoing)</h6>
                               </div>
                             
                             </div>
                             </a>
                         </Col>
                       </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>

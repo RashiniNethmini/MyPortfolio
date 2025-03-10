@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/my.jpeg";
+import headerImg from "../assets/img/rashi.jpeg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 // import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import Resume from './resume.pdf';
+import Resume from './Rashini Nethmini_SE.pdf';
 
 
 export const Banner = () => {
@@ -62,7 +62,7 @@ export const Banner = () => {
                 {/* </span> */}</h3>
                 <h1>Hi! I'm <br/>
                 Rashini Nethmini</h1>
-                  <p>Undergraduate at University of Moratuwa</p>
+                  <p>Final Year Undergraduate <br/>University of Moratuwa</p>
                   <a href={Resume} download style={{textDecoration:'none'}}> <button onClick={() => console.log('connect')}><ArrowRightCircle size={25} /> &nbsp;&nbsp;Download my CV </button></a>
               </div>}
             </TrackVisibility>

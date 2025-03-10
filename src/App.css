@@ -631,3 +631,56 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
+
+.experience {
+  border:1px solid #3c3a3a ;
+  border-width: 75px;
+  padding: 80px 0;
+  position: relative;
+  background-color: black;
+}
+
+.experience p{
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
+}
+.experience .p1{
+  margin-bottom: -10px;
+}
+.experience .p2{
+   font-size: 15px;
+}
+
+.experience .e{
+  text-align: center;
+}
+.experience .eone{
+  padding: 20px 100px 20px 100px;
+  border:1px solid #3c3a3a ;
+  text-align: center;
+  display: inline-block;
+}
+.experience h2{
+  font-size: 45px;
+	font-weight: 700;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .experience .eone {
+    width: 90%; /* More flexible width */
+    padding: 20px; /* Reduces padding for small screens */
+  }
+
+  .experience p {
+    width: 90%; /* Makes sure text also adjusts */
+  }
+  .experience h2 {
+    font-size: 28px; /* Smaller size for mobile view */
+  }
+}
