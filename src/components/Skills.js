@@ -82,6 +82,7 @@ export const Skills = () => {
                                 <h6 style={{fontSize:'15px'}}>MYSQL</h6>
                                 <h6 style={{fontSize:'15px'}}>MONGODB</h6> 
                                 <h6 style={{fontSize:'15px'}}>MSSQL</h6> 
+                                <h6 style={{fontSize:'15px'}}>PL/SQL</h6> 
                                 <h6 style={{fontSize:'15px'}}><br/> </h6>
                             </div>
                             {/* <div className="item">

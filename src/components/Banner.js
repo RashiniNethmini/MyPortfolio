@@ -62,7 +62,7 @@ export const Banner = () => {
                 {/* </span> */}</h3>
                 <h1>Hi! I'm <br/>
                 Rashini Nethmini</h1>
-                  <p>Final Year Undergraduate <br/>University of Moratuwa</p>
+                  <p>Software Engineer <br/>Graduate-University of Moratuwa</p>
                   <a href={Resume} download style={{textDecoration:'none'}}> <button onClick={() => console.log('connect')}><ArrowRightCircle size={25} /> &nbsp;&nbsp;Download my CV </button></a>
               </div>}
             </TrackVisibility>
