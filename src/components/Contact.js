@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/myfirst.jpeg";
 import TrackVisibility from 'react-on-screen';
-import emailjs from "@emailjs/browser";
+
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -17,7 +17,7 @@ export const Contact = () => {
   const [buttonText, setButtonText] = useState('Send');
   const [status, setStatus] = useState({});
   const [done, setDone] = useState(false); // Add state for successful submission
-  const form = useRef(null); // Create ref for form to be used in emailjs.sendForm
+
 
   const onFormUpdate = (category, value) => {
     setFormDetails({
@@ -27,38 +27,42 @@ export const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setButtonText("Sending...");
-    // Check if email and message fields are filled
-  if (!formDetails.firstName || !formDetails.email || !formDetails.message) {
-    setStatus({ success: false, message: 'Please fill the all fields.' });
-    setButtonText("Send");
-    return; // Stop further execution if fields are empty
-  }
-    
-    // Use emailjs to send form data
-    emailjs
-      .sendForm(
-        "service_pqyll8j",
-        "template_h735l6w",
-        form.current,
-        "Al-S8RLTR8u_hlMf5"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setDone(true);
-          setStatus({ success: true, message: 'Message sent successfully' });
-        },
-        (error) => {
-          console.log(error.text);
-          setStatus({ success: false, message: 'Something went wrong, please try again later.' });
-        }
-      );
+  e.preventDefault();
+  setButtonText("Sending...");
 
+  if (!formDetails.firstName || !formDetails.email || !formDetails.message) {
+    setStatus({ success: false, message: "Please fill all fields." });
     setButtonText("Send");
-    setFormDetails(formInitialDetails);
-  };
+    return;
+  }
+
+  try {
+    const response = await fetch("https://formspree.io/f/mkoorqnd", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: formDetails.firstName,
+        email: formDetails.email,
+        message: formDetails.message
+      })
+    });
+
+    if (response.ok) {
+      setStatus({ success: true, message: "Message sent successfully!" });
+      setFormDetails(formInitialDetails);
+      setDone(true);
+    } else {
+      throw new Error("Failed");
+    }
+  } catch (error) {
+    setStatus({ success: false, message: "Something went wrong." });
+  }
+
+  setButtonText("Send");
+};
+
 
   return (
     <section className="contact" id="connect">
@@ -76,7 +80,7 @@ export const Contact = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h2>Contact Me</h2>
-                  <form ref={form} onSubmit={handleSubmit}>
+                 <form onSubmit={handleSubmit}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
                         <input
